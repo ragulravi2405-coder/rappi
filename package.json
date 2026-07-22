@@ -1,0 +1,12 @@
+{
+  "name": "smart-gpt",
+  "version": "1.0.0",
+  "description": "SmartGPT - Flutter client and Node.js Express backend",
+  "scripts": {
+    "install:server": "npm install --prefix server",
+    "start:server": "npm start --prefix server",
+    "dev:server": "npm run dev --prefix server",
+    "client": "flutter run",
+    "client:web": "flutter run -d chrome"
+  }
+}
