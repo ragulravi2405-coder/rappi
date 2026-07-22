@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "SmartGPT - Flutter client and Node.js Express backend",
   "scripts": {
+    "build": "npm install --prefix server",
+    "start": "npm start --prefix server",
     "install:server": "npm install --prefix server",
     "start:server": "npm start --prefix server",
     "dev:server": "npm run dev --prefix server",
