@@ -5,7 +5,7 @@ import '../providers/chat_provider.dart';
 import '../routes/app_routes.dart';
 
 class ChatHistoryDrawer extends StatefulWidget {
-  const ChatHistoryDrawer({Key? key}) : super(key: key);
+  const ChatHistoryDrawer({super.key});
 
   @override
   State<ChatHistoryDrawer> createState() => _ChatHistoryDrawerState();
@@ -137,7 +137,7 @@ class _ChatHistoryDrawerState extends State<ChatHistoryDrawer> {
                 children: [
                   CircleAvatar(
                     radius: 20,
-                    backgroundColor: theme.colorScheme.primary.withOpacity(0.1),
+                    backgroundColor: theme.colorScheme.primary.withValues(alpha: 0.1),
                     child: Text(
                       authProvider.currentUser?.name.substring(0, 1).toUpperCase() ?? 'U',
                       style: TextStyle(
@@ -161,7 +161,7 @@ class _ChatHistoryDrawerState extends State<ChatHistoryDrawer> {
                           authProvider.currentUser?.email ?? 'user@gmail.com',
                           style: TextStyle(
                             fontSize: 12,
-                            color: theme.colorScheme.onSurface.withOpacity(0.6),
+                            color: theme.colorScheme.onSurface.withValues(alpha: 0.6),
                           ),
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
@@ -191,7 +191,7 @@ class _ChatHistoryDrawerState extends State<ChatHistoryDrawer> {
                 label: const Text('New Chat'),
                 style: ElevatedButton.styleFrom(
                   minimumSize: const Size.fromHeight(48),
-                  backgroundColor: theme.colorScheme.primary.withOpacity(0.1),
+                  backgroundColor: theme.colorScheme.primary.withValues(alpha: 0.1),
                   foregroundColor: theme.colorScheme.primary,
                   elevation: 0,
                   shape: RoundedRectangleBorder(
@@ -239,7 +239,7 @@ class _ChatHistoryDrawerState extends State<ChatHistoryDrawer> {
                           child: Text(
                             _searchQuery.isEmpty ? 'No conversations yet' : 'No chats found',
                             style: TextStyle(
-                              color: theme.colorScheme.onSurface.withOpacity(0.4),
+                              color: theme.colorScheme.onSurface.withValues(alpha: 0.4),
                               fontSize: 13,
                             ),
                           ),
@@ -255,7 +255,7 @@ class _ChatHistoryDrawerState extends State<ChatHistoryDrawer> {
                               margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                               decoration: BoxDecoration(
                                 color: isSelected
-                                    ? theme.colorScheme.primary.withOpacity(0.1)
+                                    ? theme.colorScheme.primary.withValues(alpha: 0.1)
                                     : Colors.transparent,
                                 borderRadius: BorderRadius.circular(10),
                               ),
@@ -270,7 +270,7 @@ class _ChatHistoryDrawerState extends State<ChatHistoryDrawer> {
                                   size: 16,
                                   color: isSelected
                                       ? theme.colorScheme.primary
-                                      : theme.colorScheme.onSurface.withOpacity(0.7),
+                                      : theme.colorScheme.onSurface.withValues(alpha: 0.7),
                                 ),
                                 title: Text(
                                   chat.title,
@@ -288,7 +288,7 @@ class _ChatHistoryDrawerState extends State<ChatHistoryDrawer> {
                                   icon: Icon(
                                     Icons.more_vert,
                                     size: 16,
-                                    color: theme.colorScheme.onSurface.withOpacity(0.5),
+                                    color: theme.colorScheme.onSurface.withValues(alpha: 0.5),
                                   ),
                                   padding: EdgeInsets.zero,
                                   onSelected: (action) {

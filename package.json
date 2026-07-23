@@ -1,14 +1,15 @@
 {
   "name": "smart-gpt",
   "version": "1.0.0",
-  "description": "SmartGPT - Flutter client and Node.js Express backend",
+  "description": "SmartGPT - Full-stack AI Chat App with Flutter frontend and Node.js Express backend",
   "scripts": {
-    "build": "npm install --prefix server",
-    "start": "npm start --prefix server",
-    "install:server": "npm install --prefix server",
-    "start:server": "npm start --prefix server",
-    "dev:server": "npm run dev --prefix server",
-    "client": "flutter run",
-    "client:web": "flutter run -d chrome"
+    "build": "npm install --prefix backend",
+    "start": "npm start --prefix backend",
+    "dev": "npm run dev --prefix backend",
+    "install:backend": "npm install --prefix backend",
+    "start:backend": "npm start --prefix backend",
+    "dev:backend": "npm run dev --prefix backend",
+    "frontend": "cd frontend && flutter run",
+    "frontend:web": "cd frontend && flutter run -d chrome"
   }
 }
